@@ -1,0 +1,630 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+}
+
+header {
+  background-color: #726fff;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  padding: 0 10vw;
+  height: 80px;
+  box-shadow: 0px 0px 10px 0px rgba(111, 111, 112, 0.465);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 231px;
+  height: 40px;
+  margin: 20px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav-ul {
+  list-style: none;
+  margin-left: 125px;
+  margin-right: 360px;
+}
+.nav-ul li {
+  display: inline-block;
+  line-height: 80px;
+  height: 80px;
+  font-size: 14px;
+  width: 80px;
+  color: white;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.nav-ul li.active {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom-color: white;
+}
+.nav-ul li a {
+  width: 100%;
+  color: white;
+}
+
+.login-register {
+  width: 150px;
+  line-height: 80px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+.login-register span {
+  padding: 0 20px;
+  color: white;
+  cursor: pointer;
+}
+.login-register span:first-child {
+  border-right: 1px solid white;
+}
+
+main {
+  position: relative;
+}
+main > div {
+  box-sizing: border-box;
+  min-width: 1200px;
+  padding: 0 10vw;
+}
+
+footer {
+  width: 100%;
+  background-color: #6966eb;
+}
+footer p {
+  line-height: 50px;
+  width: 100%;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul, ol, dl, dd, p, a, span {
+  margin-bottom: 0;
+}
+
+header h3 {
+  line-height: 80px;
+  font-size: 20px;
+  width: 600px;
+  text-align: left;
+  color: white;
+}
+
+.display-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.display-card .pic {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.display-card .title {
+  width: 100%;
+}
+
+.theme-btn {
+  color: white;
+  background: #6966eb;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.logged-box {
+  width: 80px;
+  height: 80px;
+  margin-right: 5px;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logged-box:hover .tool-box {
+  height: 100px;
+  overflow: visible;
+}
+
+.userInfo {
+  width: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+.userInfo span {
+  margin-left: 10px;
+  width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+.userInfo img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  border: 1px solid white;
+}
+
+.tool-box {
+  z-index: 1;
+  top: 70px;
+  position: absolute;
+  width: 90px;
+  height: 0;
+  left: -58px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(174, 174, 174, 0.44);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+}
+.tool-box::before {
+  content: "";
+  border: 7px solid transparent;
+  border-bottom-color: white;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -14px;
+}
+.tool-box span {
+  cursor: pointer;
+}
+
+/* userInfo */
+.logged-box {
+  display: none;
+}
+
+main {
+  position: relative;
+  min-width: 1200px;
+  margin-left: 10vw;
+}
+main > div {
+  padding: 0;
+  float: left;
+  min-width: auto;
+  margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 0px rgba(174, 174, 174, 0.44);
+  border-radius: 8px;
+}
+main .main-content .collect {
+  line-height: 30px;
+  width: 70px;
+}
+main .main-content .collect span {
+  top: 6px;
+}
+
+.side-bar {
+  padding: 0 20px;
+}
+
+.left-side {
+  margin-left: 10px;
+  width: 240px;
+  height: 585px;
+  position: relative;
+}
+.left-side .title {
+  margin: 10px 0 30px 0;
+  height: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 45px;
+  color: #333333;
+}
+.left-side .ques-part {
+  margin-top: 25px;
+  font-size: 12px;
+  color: white;
+}
+.left-side .ques-part .tag-box {
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.left-side .collect {
+  background: #f1f3f8;
+  position: relative;
+}
+.left-side .collect.active::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  left: 10px;
+  top: 5px;
+  background-image: url("../image/star-full.png");
+  background-size: 9px 9px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.left-side .single {
+  border-bottom: 1px solid #e6e6e6;
+}
+.left-side .tag {
+  margin: 0 5px 5px 0;
+}
+.left-side .tag > div {
+  width: 30px;
+  line-height: 18px;
+  height: 18px;
+  text-align: center;
+}
+.left-side .tag .ans {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #f1f3f8;
+  color: grey;
+}
+.left-side .tag .ans.correct {
+  color: white;
+  background-color: #6966eb;
+}
+.left-side .tag .ans.wrong {
+  color: white;
+  background-color: #ff4b50;
+}
+.left-side .sub-title {
+  font-size: 12px;
+  color: #333333;
+}
+.left-side .states {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 240px;
+  height: 40px;
+  box-shadow: 0px 0px 10px 0px rgba(174, 174, 174, 0.44);
+  border-radius: 0px 0px 8px 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.left-side .states .collect {
+  background-color: #fff;
+}
+.left-side .states span {
+  display: inline-block;
+  margin: 0 20px 0 15px;
+  position: relative;
+}
+.left-side .states span::before {
+  position: absolute;
+  content: "";
+  left: -20px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+}
+.left-side .states span.collect::before {
+  background-image: url("../image/star-full.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.left-side .states span.done::before {
+  background-color: #6966eb;
+}
+.left-side .states span.todo::before {
+  background-color: #f1f3f8;
+}
+
+.left-slider {
+  position: relative;
+}
+.left-slider::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 11px;
+  height: inherit;
+  width: 0;
+  border: 2px solid #6966eb;
+}
+
+.right-side {
+  padding: 0 10px;
+  width: 120px;
+  height: 160px;
+  position: relative;
+  right: 0;
+}
+.right-side button {
+  font-style: 14px;
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  width: 120px;
+  height: 35px;
+  box-shadow: 0px 0px 10px 0px rgba(174, 174, 174, 0.44);
+  border-radius: 4px;
+}
+.right-side .content {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-side .content > div {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right-side .content > div:first-child {
+  border-bottom: 1px solid #f1f3f8;
+  width: 100px;
+}
+.right-side .content span[class*=exam] {
+  color: red;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.right-side .content span.exam-time {
+  font-size: 16px;
+}
+.right-side .content span {
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.main-content {
+  margin-left: 15px;
+  margin-right: 20px;
+  width: 800px;
+  height: 87vh;
+  overflow-y: scroll;
+}
+.main-content .single > .title, .main-content .multi > .title {
+  padding-left: 20px;
+  background-color: #f5f5f5;
+  line-height: 60px;
+  font-size: 20px;
+  position: relative;
+}
+.main-content .single > .title pre, .main-content .multi > .title pre {
+  position: absolute;
+  left: 20px;
+  top: -20px;
+}
+
+.exercise {
+  margin: 0 20px;
+  padding: 30px 0;
+  width: 760px;
+  display: list-item;
+  list-style: decimal inside;
+  border-bottom: 1px solid #f1f3f8;
+  position: relative;
+}
+.exercise .collect {
+  display: inline-block;
+  width: 50px;
+  padding-left: 30px;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  background: #fff;
+  cursor: pointer;
+}
+.exercise .collect span {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../image/star.png");
+}
+.exercise .collect.active {
+  color: #fe8545;
+}
+.exercise .collect.active span {
+  background-image: url("../image/star-full.png");
+}
+
+.question-part .title {
+  font-size: 16px;
+}
+.question-part ul {
+  margin: 10px 0;
+}
+.question-part ul li {
+  list-style: none;
+  line-height: 30px;
+}
+.question-part ul li.active {
+  color: #6966eb;
+}
+.question-part ul label {
+  margin-left: 10px;
+}
+
+.answer-part {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  background-color: #fafafa;
+  border-radius: 4px;
+  position: relative;
+}
+.answer-part p {
+  margin-bottom: 15px;
+}
+.answer-part .answer {
+  color: #ff4b50;
+}
+.answer-part .ans {
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+}
+.answer-part .ans::before {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  content: "";
+  left: 0px;
+  background-image: url("../image/ans.png");
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  background-position: center center;
+  border-radius: 4px;
+}
+.answer-part .ans.correct::before {
+  background-color: #1dc88c;
+}
+.answer-part .ans.wrong::before {
+  background-color: #ff4b50;
+}
+
+.answer.correct {
+  color: #1dc88c;
+}
+
+.left-side .ans {
+  border-bottom: 1px solid #fff;
+}
+.left-side .ans.todo {
+  color: grey;
+  background-color: #f1f3f8;
+}
+.left-side .ans.done {
+  color: white;
+  background-color: #6966eb;
+}
+
+.right-side .content .progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: transparent;
+}
+.right-side .content .progress span {
+  display: inline-block;
+}
+.right-side .content .progress .progress-bar {
+  height: 4px;
+  border-radius: 2px;
+  background-color: #f1f3f8;
+  position: relative;
+  width: 100px;
+}
+.right-side .content .progress .progress-bar span {
+  left: 0px;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  width: 0%;
+  background-color: #6966eb;
+}
+
+#noticeModal .modal-content {
+  width: 440px;
+  height: 180px;
+}
+#noticeModal .modal-content .modal-body {
+  font-size: 22px;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#noticeModal .btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#noticeModal .btn-box button {
+  width: 100px;
+  height: 34px;
+  border-radius: 2px;
+  outline: none;
+  background-color: white;
+  color: grey;
+  font-size: 14px;
+  border: 1px solid grey;
+}
+#noticeModal .btn-box button:last-child {
+  background-color: red;
+  color: white;
+  border: 1px solid grey;
+  border: none;
+  margin-left: 20px;
+}
+
+.exercise .collect {
+  width: 80px;
+  z-index: 1;
+}
+.exercise .collect span {
+  top: 3px;
+}
+
+.multi {
+  display: none;
+}
+
+.toTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  color: #6966eb;
+  font-size: 20px;
+  background-color: red;
+}

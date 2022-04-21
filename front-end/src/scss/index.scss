@@ -1,0 +1,375 @@
+@import 'header-footer';
+@import '_mixin';
+
+main.index {
+    background-color: transparent;
+    // display: none;
+}
+
+.content-part {
+    background-color: transparent;
+}
+
+.bg-cover {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+
+        &:first-child {
+            top: -60px;
+            left: 0;
+        }
+
+        &:last-child {
+            top: 1260px;
+            left: 0;
+        }
+    }
+}
+
+.banner-part {
+    // width: 100vw;
+    height: 435px;
+    // border-top: 1px solid white;
+    // position: relative;
+    display: grid;
+    grid-template: 1fr/1fr 540px;
+    margin-top: 55px;
+    margin-left: 50px;
+
+
+    .text-part {
+        margin-top: 65px;
+        color: #ffffff;
+
+        h4 {
+            // width: 129px;
+            height: 30px;
+            // font-family: SourceHanSansCN-Bold;
+            font-size: 30px;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            // width: 414px;
+            line-height: 135px;
+            // height: 60px;
+            font-size: 64px;
+            letter-spacing: 6px;
+
+            span {
+                padding: 30px 0;
+                border-bottom: 3px solid white;
+            }
+        }
+
+        h5 {
+            margin-top: 35px;
+            // width: 455px;
+            font-weight: normal;
+            height: 25px;
+            font-size: 26px;
+            letter-spacing: 3px;
+        }
+    }
+
+    img {
+        width: 540px;
+        height: 435px;
+        right: 10vw;
+    }
+}
+
+.intro-list {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: content;
+    width: 100%;
+    height: 220px;
+
+    >div {
+        width: 220px;
+        height: 220px;
+        // background-color: #ffffff;
+        box-shadow: 0px 0px 10px 0px rgba(174, 174, 174, 0.44);
+        border-radius: 8px;
+    }
+
+    .display-card {
+        @include set-card-img(120px, 22px) {
+
+            // width: 90px;
+            // height: 22px; 
+            .card-title {
+                font-weight: normal;
+                // font-stretch: normal;
+                line-height: 30px;
+                letter-spacing: 1px;
+                color: #666666;
+            }
+        }
+    }
+}
+
+.content-part {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    color: #333;
+
+    .content {
+        width: 1200px;
+    }
+
+    .title {
+        width: 600px;
+        position: relative;
+        text-align: center;
+        line-height: 48px;
+
+        & span:first-child {
+            width: 100%;
+            text-align: center;
+            font-size: 48px;
+            font-weight: normal;
+            letter-spacing: 5px;
+            color: #000000;
+            opacity: 0.15;
+            text-transform: uppercase;
+        }
+
+        & span:last-child {
+            width: 200px;
+            text-align: center;
+            // left: 0;
+            left: 200px;
+            position: absolute;
+            font-size: 38px;
+            font-weight: bold;
+            letter-spacing: 0px;
+            color: #373737;
+            z-index: 1;
+        }
+    }
+}
+
+.examination {
+    width: 100vw;
+    height: 440px;
+    margin-top: 78px;
+    // background-color: #fff;
+
+    .content {
+        width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        img {
+            width: 410px;
+            height: 360px;
+            display: inline-block;
+        }
+
+        ul {
+            li {
+                list-style-type: none;
+                width: 100%;
+                line-height: 40px;
+                position: relative;
+                font-size: 20px;
+                color: #666666;
+
+                &::before {
+                    position: absolute;
+                    left: -25px;
+                    bottom: 15px;
+                    content: "";
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    border: solid 2px $theme-blue;
+                }
+            }
+        }
+
+        button {
+            color: white;
+            position: absolute;
+            outline: none;
+            border: none;
+            right: 30px;
+            bottom: 50px;
+            width: 150px;
+            height: 50px;
+            font-size: 18px;
+            letter-spacing: 2px;
+            background-color: $theme-blue;
+        }
+
+        .text-part {
+            height: 260px;
+            // position: relative;
+            // bottom: 50px;
+        }
+    }
+}
+
+.datastatics {
+    width: 100vw;
+    height: 405px;
+    margin-top: 180px;
+    // background-color: rgb(245, 246, 245);
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        //设置颜色
+        $colors: $theme-blue, #eb66ab, #ab66eb, #e366eb;
+
+        @each $c in $colors {
+            $i: index($colors, $c);
+
+            .display-card:nth-child(#{$i}) .circle-box {
+                width: 160px;
+                height: 160px;
+                background-color: $c;
+                border-radius: 50%;
+                box-shadow: 0 0 0 20px rgba($c, 0.5);
+                box-sizing: border-box;
+                margin: 20px;
+            }
+        }
+
+        .display-card {
+            width: 280px;
+            height: 320px;
+            justify-content: space-evenly;
+            background-color: white;
+            border-radius: 10px;
+
+            .pic {
+                >span {
+                    color: white;
+                    font-size: 24px;
+
+                    span {
+                        font-size: 44px;
+                    }
+                }
+            }
+
+            .title {
+                // height:20%;
+                font-size: 24px;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.announcement {
+    margin-top: 150px;
+    // background-color: white;
+    height: 500px;
+    margin-bottom: 50px;
+
+    .display-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .pic {
+            width: 525px;
+            height: 410px;
+            background-image: url("../image/bg7.png");
+            background-position: center center;
+            background-size: cover;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            img {
+                margin: auto right;
+            }
+        }
+
+        .text-part {
+            height: 415px;
+            margin: 0 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+    }
+
+    dl {
+        dt {
+            margin-top: 10px;
+            font-size: 19px;
+        }
+
+        dd {
+            padding: 15px 0;
+            font-size: 16px;
+            border-bottom: 1px solid #bdbdbd;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+.tag-box {
+    line-height: 14px;
+    font-size: 14px;
+    display: flex;
+
+    .tag {
+        display: inline-block;
+        margin-right: 20px;
+        padding: 5px 15px;
+        border-radius: 14px;
+        width: fit-content;
+        border: 1px solid $theme-blue;
+        background-color: transparent;
+        color: $theme-blue;
+
+        &.active {
+            color: white;
+            border-color: transparent;
+            background-color: $theme-blue;
+        }
+    }
+}
+
+#done-tests>p {
+    font-size: 20px;
+    width: 100%;
+    line-height: 30px;
+    // color: grey;
+    // text-align: center;
+}
+
+.test-list .tag.emergency {
+    background-color: red;
+    padding: 0 3px;
+    width: fit-content;
+}

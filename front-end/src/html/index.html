@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蜗牛考试系统</title> 
+</head>
+
+<body>
+    <!-- 模态框 -->
+
+    <!-- 修改信息 -->
+    <div class="modal fade" id="changeInfoModal" tabindex="-1" aria-labelledby="changeInfoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="changeInfoModalLabel">修改资料</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="avatar-info">
+                        <img src="../image/avatar01.png" alt="">
+                        <input type="file" id="picUploader"/>
+                        <span class="name">李四</span>
+                        <span>点击图片修改图像信息</span>
+                    </div>
+                    <div class="detail-info">
+                        <div class="input-box">
+                            <label for="phone">手机号：</label>
+                            <input type="text" name="phone" id="phone" disabled>
+                            <span>*手机号不可更改</span>
+                        </div>
+                        <div class="input-box">
+                            <label for="name">姓名：</label>
+                            <input type="text" name="name" id="name">
+                            <span>*由字母、数字构成</span>
+                        </div>
+                        <div>
+                            <label>性别：</label>
+                            <div class="inline-box">
+                                <input type="radio" name="sex" id="male" value="男">
+                                <label for="male">男</label>
+                                <input type="radio" name="sex" id="female" value="女">
+                                <label for="female">女</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label>修改密码：</label>
+                            <div class="inline-box">
+                                <input type="password" name="password">
+                                <!-- <select name="department" id="department">
+                                    <option value="">信息中心</option>
+                                    <option value="">信息中心2</option>
+                                </select> -->
+                            </div>
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">取消</button>
+                            <button class="infoConfirmed">确认</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--排行榜-->
+    <div class="modal fade" id="rankModal" tabindex="-1" aria-labelledby="rankModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>名次</th>
+                                <th>考试</th>
+                                <th>成绩</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>第一周周考</td>
+                                <td>98</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>第二周周考</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>第三周周考</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>第四周周考</td>
+                                <td>88</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 公告栏 -->
+    <div class="modal fade" tabindex="-1" id="announcementModal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">蜗牛创想7周年 | 探寻职业教育的本质</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                            今天这篇文章为蜗牛创想CEO邓强老师对内的全员邮件，在公司成立7周年这个特殊的日子，邓老师向大家分享了蜗牛创想近年来在探寻职业教育本质上的一些思考和体会。
+                        <br>
+                            各位同事，大家好！
+                            今天，是蜗牛创想成立7周年的日子，作为一名讲师很想跟大家谈一谈关于职业教育这个话题，分享一些我个人的思考。我是一名具备13年教学经验的讲师，现在同样在给学生上课。2009年以来，我从未离开讲台半步，我热爱这份事业，热爱这三尺讲台，它不仅带给了我成就与荣耀，也让我收获了金钱与事业。“桃李满天下，雨露润春华”，相信每一个师者，一定也可以收获桃李满天下的成就与荣耀。
+                            公司旗下蜗牛学苑作为一家IT教育机构，我们究竟应该培养什么样的学生？我们究竟应该怎样去培养学生？另外一个层面，作为蜗牛学苑占据着半数人员规模最大的教学团队，我们究竟需要什么样的老师？怎样才算是一名好老师？这四个问题，我相信是任何一家教培机构或者各类学校都想要明白的问题，但是往往该问题又很难回答清楚。
+                            不瞒大家讲，其实我一直对当今中国的教育现状有些意见，尤其是大学教育，存在的问题很多，这方面的情况我就不细聊了，我们也改变不了，但这并不妨碍我爱国。正是基于我对当前大学教育的认识，蜗牛创想一直想自己办一所大学。但是这也是一桩大买卖，而且受到的约束太多，只要体制不改变，也许我们去办一所大学也最终会变成我们自己最讨厌的样子，这些今天咱们都不去谈了。换个角度去想，大学教育要不出问题，也许就没有我们这类职业教育生存的空间了，某个方面来说，我们得感谢大学。今天咱们就深层次的聊聊蜗牛学苑这些年，在IT职业教育这个领域的一些思考和经验。
+                        <br>
+                            首先，让我们一起来思考两个问题。
+                            问题一：大学教育，三年或者四年，花费至少接近10万？都没能让你学会一门手艺，那为什么职业培训短短几个月的时间（以IT行业为例，学费大概2万左右），就能让你学会一门手艺呢？
+                            问题二：为什么一名大学生，花费了10万块钱，连工作都找不到，但是却没有学生投诉这所大学，它不给我安排工作。但是，一名培训机构的学生，花费了2万块钱的学费（加上生活费住宿费什么的应该也不会超过3万），培训结束后找不到工作，就要控诉这家培训机构呢？
+                    </p>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+            <img src="../image/logo-1.png" alt="">
+        </div>
+        <ul class="nav-ul">
+            <li class="index"><a href="javascript:void(0)" >首页</a></li>
+            <li class="tests "><a href="javascript:void(0)" >考试</a></li>
+            <li class="errors"><a href="javascript:void(0)" >错题本</a></li>
+            <li class="collections"><a href="javascript:void(0)" >收藏夹</a></li>
+        </ul>
+        <div class="login-register">
+            <span id="login-Btn">登录</span>
+            <span id="register-Btn">注册</span>
+        </div>
+        <div class="logged-box">
+            <div class="userInfo">
+                <img src="../image/avatar01.png" alt="">
+                <span>李四</span>
+            </div>
+            <div class="tool-box">
+                <!-- Button trigger modal -->
+                <span data-toggle="modal" id='changeInfoBtn' data-target="#changeInfoModal">
+                    修改资料
+                </span>
+                <span data-toggle="modal" id='rankBtn' data-target="#rankModal">
+                    排行榜
+                </span>
+                <span class="quitBtn">退出登录</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="index  active">
+        <div class="bg-cover">
+            <img src="../image/bg01.png" alt="">
+            <img src="../image/bg02.png" alt="">
+            <!-- <div class="bg-blue"></div>
+            <div class="bg-grey"></div> -->
+        </div>
+        <div class="banner-part">
+            <div class="text-part">
+                <h4>蜗牛学院</h4>
+                <h2><span>在线</span>考试系统</h2>
+                <h5>支持超高同时在线、监考中心防作弊</h5>
+            </div>
+            <img src="../image/banner02.png" alt="">
+        </div>
+        <div class="intro-list">
+            <div class="display-card">
+                <img src="../image/pic-circle01.png" alt="">
+                <span class="card-title">正在考试</span>
+            </div>
+            <div class="display-card">
+                <img src="../image/pic-circle05.png" alt="">
+                <span class="card-title">模拟考试</span>
+            </div>
+            <div class="display-card">
+                <img src="../image/pic-circle03.png" alt="">
+                <span class="card-title">每日一测</span>
+            </div>
+            <div class="display-card">
+                <img src="../image/pic-circle04.png" alt="">
+                <span class="card-title">顺序练习</span>
+            </div>
+            <div class="display-card">
+                <img src="../image/pic-circle02.png" alt="">
+                <span class="card-title">分类练习</span>
+            </div>
+        </div>
+        <div class="content-part examination">
+            <div class="title">
+                <span>examination</span>
+                <span>严肃考试</span>
+            </div>
+            <div class="content">
+                <img src="../image/banner01.png" alt="">
+                <div class="text-part">
+                    <ul>
+                        <li>适用于高校考试、认证考试、招聘考试等严格防作弊场景 </li>
+                        <li>学员考前调试设备，本地备份答案及云端同步，断电断网续考</li>
+                        <li>人脸识别与权威数据库比对，AI监考中心三路音视频实时监考</li>
+                        <li>支持匿名判卷及分题分学员判卷，避免判卷过程的舞弊行为</li>
+                    </ul>
+                    <button>探索更多</button>
+                </div>
+            </div>
+        </div>
+        <div class="content-part datastatics">
+            <div class="title">
+                <span>datastatics</span>
+                <span>数据统计</span>
+            </div>
+            <div class="content">
+                <div class="display-card">
+                    <div class="pic circle-box">
+                        <span><span name="exercise">0</span>道</span>
+                    </div>
+                    <p class="title">练习题数</p>
+                </div>
+                <div class="display-card">
+                    <div class="pic circle-box">
+                        <span><span name="day">0</span>天</span>
+                    </div>
+                    <p class="title">学习天数</p>
+                </div>
+                <div class="display-card">
+                    <div class="pic circle-box">
+                        <span><span name="lastScore">0</span>分</span>
+                    </div>
+                    <p class="title">最近考试</p>
+                </div>
+                <div class="display-card">
+                    <div class="pic circle-box">
+                        <span><span name="avgScore">0</span>分</span>
+                    </div>
+                    <p class="title">平均分数</p>
+                </div>
+            </div>
+        </div>
+        <div class="content-part announcement">
+            <div class="title">
+                <span>announcement</span>
+                <span>考试公告</span>
+            </div>
+            <div class="content display-info">
+                <div class="pic">
+                    <img src="../image/banner03.png" alt="">
+                </div>
+                <div class="text-part">
+                    <div class="tag-box">
+                        <div class="tag active">全部</div>
+                        <div class="tag">最近</div>
+                        <div class="tag">一个月前</div>
+                    </div>
+                    <dl>
+                        <dt>2022年安徽公务员考试公告</dt>
+                        <dd>
+                            关于推迟安徽省2022年度考试录用公务员和选调生笔试工作的公告 为认真贯彻落实安徽省新冠肺炎疫情防控部署要求,切实做好疫情防控工作,保障广大...
+                        </dd>
+                        <dt>2022年安徽公务员考试公告</dt>
+                        <dd>
+                            关于推迟安徽省2022年度考试录用公务员和选调生笔试工作的公告 为认真贯彻落实安徽省新冠肺炎疫情防控部署要求,切实做好疫情防控工作,保障广大...
+                        </dd>
+                        <dt>2022年安徽公务员考试公告</dt>
+                        <dd>
+                            关于推迟安徽省2022年度考试录用公务员和选调生笔试工作的公告 为认真贯彻落实安徽省新冠肺炎疫情防控部署要求,切实做好疫情防控工作,保障广大...
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main class="tests">
+        <div id="loading-mask">
+            <div class="loading">
+                <span class="quote left">{</span>
+                <span class="animation_text"></span>
+                <span class="quote right">}</span>
+            </div>
+        </div>
+        <p class="nav-tab">
+            <span class="purple">首页</span> > <span>考试</span>
+        </p>
+        <div class="content" id="todo-tests">
+            <p class="title">正在进行的考试</p>
+        </div>
+        <div class="content" id="done-tests">
+            <p class="title">已完成的考试</p>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © 2021 成都蜗牛创想科技有限公司</p>
+    </footer> 
+</body>
+
+</html>

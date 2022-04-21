@@ -1,0 +1,393 @@
+@import './header-footer';
+
+// @import '_mixin';
+main {
+    position: relative;
+    min-width: 1200px;
+    margin-left: $padding;
+
+    >div {
+        padding: 0;
+        float: left;
+        // position: absolute;
+        min-width: auto;
+        margin-top: 20px;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 10px 0px rgba(174, 174, 174, 0.44);
+        border-radius: 8px;
+    }
+
+    .main-content .collect {
+        line-height: 30px;
+        width: 70px;
+
+        span {
+            top: 6px;
+        }
+    }
+}
+
+
+
+.side-bar {
+    // position: absolute;
+    padding: 0 20px;
+}
+
+.left-side {
+    // position: fixed;
+    margin-left: 10px;
+    width: 240px;
+    height: 585px;
+    // left: 260px;
+    // margin-left: -260px;
+    position: relative;
+
+    .title {
+        margin: 10px 0 30px 0;
+        height: 18px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 45px;
+        color: #333333;
+    }
+
+    .ques-part {
+        margin-top: 25px;
+        font-size: 12px;
+        color: white;
+
+        .tag-box {
+            padding-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+    .collect {
+        background: #f1f3f8;
+        position: relative;
+
+        &.active::before {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            left: 10px;
+            top: 5px;
+            background-image: url("../image/star-full.png");
+            background-size: 9px 9px;
+            background-position: center center;
+            // background-position-x: 0px;
+            // background-position-y: 0px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .single {
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+
+    .tag {
+        margin: 0 5px 5px 0;
+
+        >div {
+            width: 30px;
+            line-height: 18px;
+            height: 18px;
+            text-align: center;
+            // padding-top: 1px;
+        }
+
+        .ans {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            background-color: #f1f3f8;
+            color: grey;
+
+            &.correct {
+                color: white;
+                background-color: $theme-blue;
+            }
+
+            &.wrong {
+                color: white;
+                background-color: #ff4b50;
+            }
+        }
+
+
+    }
+
+
+    .sub-title {
+        font-size: 12px;
+        color: #333333;
+    }
+
+    .states {
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        width: 240px;
+        height: 40px;
+        box-shadow: 0px 0px 10px 0px rgba(174, 174, 174, 0.44);
+        border-radius: 0px 0px 8px 8px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .collect {
+            background-color: #fff;
+        }
+
+        span {
+            display: inline-block;
+            margin: 0 20px 0 15px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: -20px;
+                top: 3px;
+                width: 12px;
+                height: 12px;
+            }
+
+            &.collect::before {
+                background-image: url("../image/star-full.png");
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+            &.done::before {
+                background-color: $theme-blue;
+            }
+
+            &.todo::before {
+                background-color: $light-grey;
+            }
+        }
+    }
+}
+
+
+
+.left-slider {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 11px;
+        height: inherit;
+        width: 0;
+        border: 2px solid $theme-blue;
+    }
+}
+
+.right-side {
+    padding: 0 10px;
+    width: 120px;
+    height: 160px;
+    position: relative;
+    // position: absolute;
+    right: 0;
+    // margin-bottom: 20px;
+
+    button {
+        font-style: 14px;
+        position: absolute;
+        left: 0;
+        bottom: -50px;
+        width: 120px;
+        height: 35px;
+        box-shadow: 0px 0px 10px 0px rgba(174, 174, 174, 0.44);
+        border-radius: 4px;
+    }
+
+    .content {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        >div {
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        >div:first-child {
+            border-bottom: 1px solid $light-grey;
+            width: 100px;
+        }
+
+        span[class*="exam"] {
+            color: red;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        span.exam-time {
+            font-size: 16px;
+        }
+
+        span {
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+.main-content {
+    margin-left: 15px;
+    margin-right: 20px;
+    width: 800px;
+    height: 87vh;
+    overflow-y: scroll;
+
+    // padding:10px;
+    .single,
+    .multi {
+        >.title {
+            padding-left: 20px;
+            background-color: #f5f5f5;
+            line-height: 60px;
+            font-size: 20px;
+            position: relative;
+
+            pre {
+                position: relative;
+                left: 20px;
+                top: -21px;
+            }
+        }
+    }
+}
+
+.exercise {
+    margin: 0 20px;
+    padding: 30px 0;
+    width: 760px;
+    display: list-item;
+    list-style: decimal inside;
+    border-bottom: 1px solid $light-grey;
+    position: relative;
+
+    .collect {
+        display: inline-block;
+        width: 50px;
+        padding-left: 30px;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        background: #fff;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-image: url("../image/star.png");
+        }
+
+        &.active {
+            color: #fe8545;
+
+            span {
+                background-image: url("../image/star-full.png");
+            }
+        }
+    }
+}
+
+.question-part {
+    .title {
+        font-size: 16px;
+    }
+
+    ul {
+        margin: 10px 0;
+
+        li {
+            list-style: none;
+            line-height: 30px;
+
+            &.active {
+                color: $theme-blue;
+            }
+        }
+
+        label {
+            margin-left: 10px;
+        }
+    }
+}
+
+.answer-part {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 4px;
+    position: relative;
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    .answer {
+        color: #ff4b50;
+    }
+
+    .ans {
+        position: relative;
+        // margin-left: 20px;
+        padding-left: 30px;
+        font-size: 16px;
+
+        &::before {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            content: "";
+            left: 0px;
+            background-image: url("../image/ans.png");
+            background-repeat: no-repeat;
+            background-size: 80% auto;
+            background-position: center center;
+            border-radius: 4px;
+        }
+
+        &.correct::before {
+            background-color: #1dc88c;
+        }
+
+        &.wrong::before {
+            background-color: #ff4b50;
+        }
+    }
+}
+
+.answer.correct {
+    color: #1dc88c;
+}

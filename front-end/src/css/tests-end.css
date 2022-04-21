@@ -1,0 +1,201 @@
+@charset "UTF-8";
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../image/bg-1.png");
+  background-repeat: no-repeat;
+  background-size: auto 260%;
+  background-position: -210px -470px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.info-box {
+  width: 600px;
+  height: 540px;
+  box-shadow: 0 0 0 10px rgba(193, 193, 193, 0.465);
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.info-box .title {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.test-info,
+.stu-info {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  color: #a2a1a1;
+  font-size: 14px;
+  border: 1px solid #a8a8a8;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 30px;
+}
+.test-info > p,
+.stu-info > p {
+  margin: 0;
+  padding: 0;
+  margin-left: 30px;
+}
+.test-info span,
+.stu-info span {
+  color: red;
+}
+.test-info::before,
+.stu-info::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  left: 10px;
+  top: -15px;
+  color: grey;
+  background-color: white;
+  font-size: 18px;
+}
+
+.test-info {
+  height: 170px;
+}
+.test-info::before {
+  content: "试卷信息";
+}
+
+.stu-info {
+  height: 135px;
+}
+.stu-info::before {
+  content: "考生信息";
+}
+
+.btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn-box button {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  background-color: white;
+  color: grey;
+  font-size: 14px;
+  border: 1px solid grey;
+}
+.btn-box button:last-child {
+  background-color: #6966eb;
+  color: white;
+  border: 1px solid grey;
+  border: none;
+  margin-left: 20px;
+}
+
+.info-box {
+  width: 800px;
+  height: 400px;
+  position: relative;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px;
+}
+.info-box img {
+  border-radius: 50%;
+  border: 1px solid white;
+  position: absolute;
+  top: -40px;
+  width: 80px;
+  height: 80px;
+  left: 360px;
+}
+
+.stu-name {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.info {
+  color: #6966eb;
+  font-size: 18px;
+}
+
+.other-info {
+  width: 400px;
+  height: 80px;
+  display: flex;
+}
+.other-info > div {
+  width: 200px;
+  height: 80px;
+  border: 1px solid rgba(191, 190, 190, 0.458);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.other-info > div:first-child {
+  border-right: none;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+}
+
+.score-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.score-info > div {
+  line-height: 20px;
+  display: flex;
+  align-items: flex-end;
+  color: #6966eb;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.score-info .info {
+  line-height: 35px;
+  font-weight: bold;
+  font-size: 44px;
+}
+
+.deco-star {
+  position: relative;
+}
+.deco-star::before, .deco-star::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-image: url("../image/star02.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  right: -30px;
+  top: 0px;
+}
+.deco-star::before {
+  width: 15px;
+  height: 15px;
+  left: -20px;
+  top: 20px;
+}

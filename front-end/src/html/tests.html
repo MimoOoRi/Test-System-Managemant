@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>习题上传页面</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        body,html{
+            margin-left: 10px;
+        }
+        input[type="text"]{
+            width: 300px;
+            height: 30px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body> 
+    <form action="javascript:void(0)" id="multi">
+        分配给试卷：
+        <div name="tests" id="tests">
+            
+        </div>
+
+        <!-- topics:<input type="text" name="topics" class="topics"> -->
+        topics:<textarea name="topics" id="" cols="50" rows="10" class="topics"></textarea>
+        <select name="" id="typeSelector">
+            <option value="0" selected>单选</option>
+            <option value="1">多选</option>
+        </select>
+        <div class="options" id="options">
+            <div class="option-0">
+                <input type="radio" name="option" class="type Num0" value="0">
+                <input type="text" class="option-text">
+            </div>
+            <div class="option-1">
+                <input type="radio" name="option" class="type Num1" value="1">
+                <input type="text" class="option-text">
+            </div>
+            <div class="option-2">
+                <input type="radio" name="option" class="type Num2" value="2">
+                <input type="text" class="option-text">
+            </div>
+            <div class="option-3">
+                <input type="radio" name="option" class="type Num3" value="3">
+                <input type="text" class="option-text">
+            </div>
+        </div>
+        analysis:   
+        <textarea name="analysis" id="" cols="100" rows="10" class="analysis"></textarea>
+        <br>
+        score:
+        <input type="text" class="score" name="score">
+        <br>
+        知识点：
+        <!-- <div name="points" id="points">
+        </div> -->
+        <select name="points" id="points"></select>
+        <button type="submit" class="submit">提交问题</button>
+    </form>
+</body>
+
+</html>

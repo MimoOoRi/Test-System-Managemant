@@ -1,0 +1,113 @@
+@import './answers';
+
+.left-side {
+    .ans {
+        &.todo {
+            color: grey;
+            background-color: #f1f3f8;
+        }
+
+        &.done {
+            color: white;
+            background-color: $theme-blue;
+        }
+
+        border-bottom: 1px solid #fff;
+    }
+}
+
+.right-side {
+    .content .progress {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: transparent;
+
+        span {
+            display: inline-block;
+        }
+
+        .progress-bar {
+            // width: 100px;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $light-grey;
+            position: relative;
+            width:100px;
+            // z-index: 1;
+            span{
+                left: 0px;
+                height: 4px;
+                border-radius: 2px;
+                position: absolute;
+                width: 0%;
+                background-color: $theme-blue;
+            }
+        }
+    }
+}
+
+#noticeModal {
+    .modal-content {
+        width: 440px;
+        height: 180px;
+
+        .modal-body {
+            font-size: 22px;
+            color: grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+
+    .btn-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        button {
+            width: 100px;
+            height: 34px;
+            border-radius: 2px;
+            outline: none;
+            background-color: white;
+            color: grey;
+            font-size: 14px;
+            border: 1px solid grey;
+
+            &:last-child {
+                background-color: red;
+                color: white;
+                border: 1px solid grey;
+                border: none;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.exercise .collect {
+    width: 80px;
+    z-index: 1;
+    span {
+        top: 3px;
+    }
+}
+
+.multi {
+    display: none;
+    // height: 0;
+}
+.toTop{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    // bottom: 30px;
+    color: $theme-blue;
+    font-size: 20px;
+    background-color: red;
+}

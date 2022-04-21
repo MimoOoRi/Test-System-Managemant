@@ -1,0 +1,106 @@
+@import 'tests-basic-info';
+
+.info-box {
+    width: 800px;
+    height: 400px;
+    position: relative;
+    color: #333;
+
+    img {
+        border-radius: 50%;
+        border: 1px solid white;
+        position: absolute;
+        top: -40px;
+        width: 80px;
+        height: 80px;
+        left: 360px;
+    }
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 14px;
+}
+
+.stu-name {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.info {
+    color: $theme-blue;
+    font-size: 18px;
+}
+
+.other-info {
+    width: 400px;
+    height: 80px;
+    display: flex;
+
+    >div {
+        width: 200px;
+        height: 80px;
+        border: 1px solid rgba(191, 190, 190, 0.458);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &:first-child {
+            border-right: none;
+        }
+    }
+}
+
+button {
+    width: 120px;
+    height: 40px;
+}
+
+.score-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    >div {
+        line-height: 20px;
+        // height: 35px;
+        display: flex;
+        align-items: flex-end;
+        color: $theme-blue;
+        // >*{
+        //     vertical-align:middle;
+        // }
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .info {
+        line-height: 35px;
+        font-weight: bold;
+        font-size: 44px;
+    }
+}
+.deco-star{
+    position: relative;
+    &::before,&::after{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-image: url("../image/star02.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        right: -30px;
+        top: 0px;
+    }
+    &::before{
+        width: 15px;
+        height: 15px;
+        left: -20px;
+        top: 20px;
+    }
+}

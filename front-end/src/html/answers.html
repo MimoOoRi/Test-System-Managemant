@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考试解析</title>
+    <!-- <link rel="stylesheet" href="../css/answers.css"> -->
+</head>
+
+<body>
+       <!-- 模态框 -->
+
+    <!-- 修改信息 -->
+    <div class="modal fade" id="changeInfoModal" tabindex="-1" aria-labelledby="changeInfoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="changeInfoModalLabel">修改资料</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="avatar-info">
+                        <img src="../image/avatar01.png" alt="">
+                        <input type="file" id="picUploader"/>
+                        <span class="name">李四</span>
+                        <span>点击图片修改图像信息</span>
+                    </div>
+                    <div class="detail-info">
+                        <div class="input-box">
+                            <label for="phone">手机号：</label>
+                            <input type="text" name="phone" id="phone" disabled>
+                            <span>*手机号不可更改</span>
+                        </div>
+                        <div class="input-box">
+                            <label for="name">姓名：</label>
+                            <input type="text" name="name" id="name">
+                            <span>*由字母、数字构成</span>
+                        </div>
+                        <div>
+                            <label>性别：</label>
+                            <div class="inline-box">
+                                <input type="radio" name="sex" id="male" value="男">
+                                <label for="male">男</label>
+                                <input type="radio" name="sex" id="female" value="女">
+                                <label for="female">女</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label>修改密码：</label>
+                            <div class="inline-box">
+                                <input type="password" name="password">
+                                <!-- <select name="department" id="department">
+                                    <option value="">信息中心</option>
+                                    <option value="">信息中心2</option>
+                                </select> -->
+                            </div>
+                        </div>
+                        <div class="btn-box">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">取消</button>
+                            <button class="infoConfirmed">确认</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--排行榜-->
+    <div class="modal fade" id="rankModal" tabindex="-1" aria-labelledby="rankModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>名次</th>
+                                <th>考试</th>
+                                <th>成绩</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>第一周周考</td>
+                                <td>98</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>第二周周考</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>第三周周考</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>第四周周考</td>
+                                <td>88</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+            <img src="../image/logo-1.png" alt="">
+        </div>
+        <ul class="nav-ul">
+            <li class="index"><a href="javascript:void(0)" >首页</a></li>
+            <li class="tests "><a href="javascript:void(0)" >考试</a></li>
+            <li class="errors"><a href="javascript:void(0)" >错题本</a></li>
+            <li class="collections"><a href="javascript:void(0)" >收藏夹</a></li>
+        </ul>
+        <div class="login-register">
+            <span id="login-Btn">登录</span>
+            <span id="register-Btn">注册</span>
+        </div>
+        <div class="logged-box">
+            <div class="userInfo">
+                <img src="../image/avatar01.png" alt="">
+                <span>李四</span>
+            </div>
+            <div class="tool-box">
+                <!-- Button trigger modal -->
+                <span data-toggle="modal" id='changeInfoBtn' data-target="#changeInfoModal">
+                    修改资料
+                </span>
+                <span data-toggle="modal" id='rankBtn' data-target="#rankModal">
+                    排行榜
+                </span>
+                <span class="quitBtn">退出登录</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="loading-mask">
+            <div class="loading">
+                <span class="quote left">{</span>
+                <span class="animation_text"></span>
+                <span class="quote right">}</span>
+            </div>
+        </div>
+        <div class="side-bar left-side">
+            <div class="title left-slider">答题卡</div>
+            <div class="content">
+                <div class="single ques-part">
+                    <div class="sub-title">单选题（共10题，合计20分）</div>
+                    <div class="tag-box">
+                        <div class="tag">
+                            <div class="ans correct">1</div>
+                            <div class="collect active"></div>
+                        </div>
+                        <div class="tag">
+                            <div class="ans wrong">2</div>
+                            <div class="collect"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="multi ques-part">
+                    <div class="sub-title">多选题（共10题，合计20分）</div>
+                    <div class="tag-box">
+                        <!-- <div class="tag">
+                            <div class="todo"></div>
+                            <div class="done"></div>
+                            <div class="collect"></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="states">
+                <span class="done">已答</span>
+                <span class="todo">未答</span>
+                <span class="collect">收藏</span>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="single">
+                <div class="title">单选题（共10题，合计20分）</div>
+                <div class="exercise-box">
+                </div>
+            </div>
+            <div class="multi">
+                <div class="title">多选题（共10题，合计20分）</div>
+                <div class="exercise-box">
+                </div>
+                <!-- <div class="exercise">
+                    <div class="collect active"><span></span>收藏</div>
+                    <div class="question-part" data-question="1">
+                        <div class="title">问题1</div>
+                        <ul class="choice-list">
+                            <li class="active">
+                                <input type="checkbox" name="que1" id="multi-1-a">
+                                <label for="multi-1-a">A. 选择1</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="que1" id="multi-1-b">
+                                <label for="multi-1-b">B. 选择1</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="que1" id="multi-1-c">
+                                <label for="multi-1-c">C. 选择1</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="que1" id="multi-1-d">
+                                <label for="multi-1-d">D. 选择1</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="answer-part">
+                        <p class="ans correct">答对了</p>
+                        <p>考生答案：<span class="answer">B</span></p>
+                        <p>正确答案：<span class="correct">A</span></p>
+                        <p>答案解析：<span class="analysis">答非所问</span></p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="side-bar right-side">
+            <div class="content">
+                <div>
+                    <span>考试成绩</span>
+                    <span class="exam-score">20.0</span>
+                </div>
+                <div>
+                    <span>考试时长</span>
+                    <span class="exam-time">00：54：34</span>
+                </div>
+            </div>
+            <button class="theme-btn">返回考试中心</button>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

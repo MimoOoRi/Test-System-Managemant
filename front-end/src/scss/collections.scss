@@ -1,0 +1,79 @@
+@import './errors';
+
+// @import './answers';
+header {
+    // position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+// main{
+//     margin-top: 80px;
+
+// }
+.main-content {
+    // margin-left: 360px;
+    // margin-left: -400px;
+    // transform: translateX(45vw);
+    overflow-y: scroll;
+    height: 85vh;
+}
+
+.right-side {
+    margin-top: 5px;
+    // right: 10vw;
+    // position: fixed;
+}
+
+.left-side {
+    // position: fixed;
+    // left: 10vw;
+}
+
+.exercise {
+    height: auto;
+    border-bottom: 1px solid $light-grey;
+
+    .collect {
+        padding-left: 0px;
+        width: 20px;
+        z-index: 1;
+        span {
+            top: 10px;
+            left: -22px;
+            background-image: url("../image/lajitong.png");
+        }
+    }
+
+    .answer-part {
+        margin-top: 10px;
+        box-sizing: border-box;
+        // width: 100%;
+        padding: 15px;
+        background-color: #fafafa;
+        border-radius: 4px;
+        border-top: none;
+        // position: relative;
+    }
+}
+
+.multi,
+.single {
+    display: none;
+}
+
+.question-part >.title{
+    position: relative;
+    pre {
+        position: relative;
+        left: 20px;
+        top: -21px;
+    }
+}
+
+// .main-content {
+//     height: fit-content;
+// }
+.answer-part {
+    height: fit-content;
+}

@@ -1,0 +1,14 @@
+@mixin set-card-img($wh:50px,$fontSize:14px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    img {
+        width: $wh;
+        height: $wh;
+    }
+    .card-title{
+        font-size: $fontSize;
+    }
+    @content;
+}
